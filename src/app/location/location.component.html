@@ -1,0 +1,14 @@
+
+<div class="flex w-full  text-orange-300 px-2" >
+    <div class="absolute bottom-0 text-lg">
+        <input *ngIf="showLocation" #newLocation type="string" name="location" placeholder="Enter a ZIP code"
+        (keyup.enter)="setLocation(newLocation.value); newLocation.value ='' ">
+        <button *ngIf="!showLocation" type="button" title="change location" (click)="openUserLocation()">{{currentlyDisplayedData?.name}}</button>
+    </div>
+
+    <div class="flex flex-auto justify-end" >
+        <button class="text-5xl" type="button" title="change units" (click)="changeUnits()"> {{currentlyDisplayedData?.main?.feels_like| number:'1.0-0'}}</button>
+        <span *ngIf="isfahrenheit">°F</span>
+        <span *ngIf="!isfahrenheit">°C</span>
+    </div>
+</div>

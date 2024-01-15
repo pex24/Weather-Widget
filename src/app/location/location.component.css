@@ -1,0 +1,16 @@
+button{
+    text-shadow: 2px 2px 2px black;
+}
+
+.location {
+    font-size: 4em;
+    color: beige;
+}
+
+input {
+    text-shadow: none;
+    text-align: center;
+}
+
+
+
